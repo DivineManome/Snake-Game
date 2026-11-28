@@ -89,6 +89,10 @@ void Snake::Update()
 		{
 			nextSpeed = Vector2{ -TILE_SIZE, 0 };
 		}
+		if (IsKeyDown(KEY_LEFT_SHIFT))
+		{
+			DrawLineToFruit();
+		}
 
 		if (frameCount % 20 == 0)
 		{
@@ -151,5 +155,22 @@ void Snake::Restart()
 		gameEnded = false;
 		player.clear();
 		Start();
+	}
+}
+
+void Snake::DrawLineToFruit()
+{
+	// Horizontal part
+	float stepX = (fruit.position.x > player[0].position.x) ? TILE_SIZE : -TILE_SIZE;
+	for (float x = player[0].position.x; x != fruit.position.x; x += stepX)
+	{
+		DrawRectangle(x, player[0].position.y, TILE_SIZE, TILE_SIZE, YELLOW);
+	}
+
+	// Vertical part
+	float stepY = (fruit.position.y > player[0].position.y) ? TILE_SIZE : -TILE_SIZE;
+	for (float y = player[0].position.y; y != fruit.position.y; y += stepY)
+	{
+		DrawRectangle(fruit.position.x, y, TILE_SIZE, TILE_SIZE, YELLOW);
 	}
 }

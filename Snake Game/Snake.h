@@ -119,4 +119,5 @@ public:
 	void Start(); // where starting stuff goes
 	void Update(); // frame by frame calculation
 	void Restart();
+	void DrawLineToFruit();
 };
