@@ -1,6 +1,6 @@
 # Snake Game
 
-<img width="800" height="789" alt="SnakeGame" src="https://github.com/user-attachments/assets/34aa830e-f912-4333-b61e-ac44d5885baf" />
+<img width="800" height="789" alt="SnakeGame" src="https://github.com/user-attachments/assets/68044b05-c006-4f6e-8cfe-605db5bc38be" />
 
 A classic Snake game built in **C++** using **Raylib**.
 
@@ -25,22 +25,16 @@ Control the snake, collect fruit, grow longer, and try to fill the entire board 
 | ↓ | Move Down |
 | ← | Move Left |
 | → | Move Right |
+| SHIFT | Fruit Tracker |
 
 ## Gameplay
 
 - Collect fruit to grow the snake.
 - Each fruit increases the snake's length by one segment.
+- Hold Left-Shift to see the fastest route towards the fruit
 - Avoid colliding with the walls.
 - Avoid colliding with your own body.
 - Fill the board to win the game.
-
-## Screenshots
-
-Add screenshots here:
-
-```text
-screenshots/gameplay.png
-```
 
 ## Requirements
 
@@ -59,7 +53,7 @@ Open the project in Visual Studio and build normally.
 
 ## Project Structure
 
-```text
+```
 .
 ├── Snake.cpp
 ├── Snake.h
